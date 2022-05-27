@@ -1,0 +1,17 @@
+datagrids:
+  frontend-orders-grid:
+    source:
+      query:
+        select:
+          - partial order1.{id, shippingAddress, sourceEntityClass, sourceEntityId, sourceEntityIdentifier}
+    columns:
+      startedFrom:
+        label:         oro.checkout.started_from.label
+        type:          twig
+        frontend_type: html
+        template:      '@OroOrder/Order/Datagrid/sourceDocument.html.twig'
+    filters:
+      columns:
+        startedFrom:
+          type: string
+          data_name: order1.sourceEntityIdentifier

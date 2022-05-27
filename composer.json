@@ -1,0 +1,59 @@
+{
+  "name": "phpro/oro-show-orders-by-shopping-list",
+  "description": "This bundle will add shopping list information to the frontend order grid",
+  "type": "symfony-bundle",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "PHPro NV",
+      "email": "info@phpro.be",
+      "homepage": "https://www.phpro.be/"
+    }
+  ],
+  "require": {
+    "php": "^8.1",
+    "oro/commerce": "^5.0",
+    "oro/platform": "^5.0"
+  },
+  "require-dev": {
+    "phpmd/phpmd": "^2.12",
+    "phpro/grumphp-shim": "^1.11",
+    "squizlabs/php_codesniffer": "^3.6"
+  },
+  "autoload": {
+    "psr-4": {
+      "Phpro\\OrdersByShoppingListBundle\\": ""
+    }
+  },
+  "config": {
+    "sort-packages": true,
+    "platform": {
+      "ext-ctype": "8.1",
+      "ext-dom": "8.1",
+      "ext-gd": "8.1",
+      "ext-iconv": "8.1",
+      "ext-intl": "8.1",
+      "ext-json": "8.1",
+      "ext-mbstring": "8.1",
+      "ext-openssl": "8.1",
+      "ext-pcntl": "8.1",
+      "ext-pdo": "8.1",
+      "ext-simplexml": "8.1",
+      "ext-soap": "8.1",
+      "ext-tokenizer": "8.1",
+      "ext-xml": "8.1",
+      "ext-xmlwriter": "8.1",
+      "ext-zip": "8.1",
+      "ext-zlib": "8.1"
+    },
+    "allow-plugins": {
+      "phpro/grumphp-shim": true
+    }
+  },
+  "repositories": {
+    "composer": {
+      "type": "composer",
+      "url": "https://packagist.orocrm.com"
+    }
+  }
+}

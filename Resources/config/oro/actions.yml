@@ -1,0 +1,9 @@
+operations:
+  oro_shoppinglist_delete:
+    enabled: false
+
+action_groups:
+  start_shoppinglist_checkout:
+    actions:
+      - '@assign_value': [ $.allowManualSourceRemove, false ]
+      - '@assign_value': [ $.removeSource, false ]

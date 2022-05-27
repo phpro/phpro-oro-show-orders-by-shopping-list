@@ -1,0 +1,25 @@
+on: [ push, pull_request ]
+
+jobs:
+  build:
+    name: Checking coding standards
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: true
+      matrix:
+        php-versions:
+          - "8.1"
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v2
+      - name: Configure PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: ${{ matrix.php-versions }}
+          tools: composer:v2
+
+      - name: Install Composer dependencies
+        run: composer install --prefer-dist --no-scripts
+
+      - name: GrumPHP
+        run: ./vendor/bin/grumphp run
